@@ -21,6 +21,7 @@ function newItem() {
 
     // 3. Adding a delete button (x)
     //let crossOutButton = $("crossOutButton");
+
     let crossOutButton = $("<button></button>");
     crossOutButton.append(document.createTextNode('X'));
     li.append(crossOutButton);
@@ -39,6 +40,5 @@ function newItem() {
     $('#list').sortable();
 
 }
-    
-    
-    
+
+
