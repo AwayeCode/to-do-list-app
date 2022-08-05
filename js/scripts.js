@@ -7,24 +7,21 @@ function newItem() {
     //let text = $(" ");
     li.append(inputValue);
 
-    if (inputValue === " ") {
+    if (inputValue.trim().length === 0) {
         alert("You must write something!")
     } else {
         $('#list').append(li);
     }
 
     //2. Crossing an item out:
-    function crossOut() {
-        li.toggleClass("strike");
-    }
 
-    li.on("dblclick", function crossOut() {
-        li.toggleClass("strike");
+    li.on("dblclick", function () {
+        li.toggleClass("strike")
     });
 
     // 3. Adding a delete button (x)
     //let crossOutButton = $("crossOutButton");
-    let crossOutButton = $("<crossOutButton></crossOutButton>");
+    let crossOutButton = $("<button></button>");
     crossOutButton.append(document.createTextNode('X'));
     li.append(crossOutButton);
 
